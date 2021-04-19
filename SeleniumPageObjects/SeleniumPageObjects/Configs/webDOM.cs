@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Chrome;
 
 namespace mySeliniumTest.Configs
 {
@@ -26,9 +27,9 @@ namespace mySeliniumTest.Configs
             {
                 return new FirefoxDriver();
             }
-            else
+            if (browser == "chrome")
             {
-                return new FirefoxDriver();
+                return new ChromeDriver();
 
             }
         }
